@@ -1,4 +1,4 @@
-pwd() == joinpath(@__DIR__, "bin") && cd(@__DIR__) # allow starting app from bin/ dir
+pwd() != @__DIR__ && cd(@__DIR__) # allow starting app from bin/ dir
 
 @info "Bootstrap" ENV pwd() f(".") f("..") f("../..")
 
