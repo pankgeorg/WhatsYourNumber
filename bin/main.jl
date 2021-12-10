@@ -4,6 +4,6 @@ ENV["STARTSERVER"] = true
 ENV["GENIE_ENV"] = "prod"
 ENV["EARLYBIND"] = true
 
-@info ENV pwd() ls("..")
+@info ENV pwd() join(readdir(abspath(".."), join=true), "\n")
 
 include("../bootstrap.jl")
